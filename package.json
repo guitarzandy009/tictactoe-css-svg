@@ -1,0 +1,37 @@
+{
+  "name": "tictactoe-css-svg",
+  "version": "1.0.0",
+  "description": "A game of Tic Tac Toe using the Pug and Stylus preprocessors for HTML and CSS. As taught by Jhey Thompkins from his course on egghead.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:html": "pug src/pug/ -o dist/ --pretty",
+    "build:css": "stylus src/stylus/styles.styl -o dist/",
+    "build": "npm run build:html && npm run build:css",
+    "watch:html": "pug src/pug/ -o dist/ --pretty --watch",
+    "watch:css": "stylus src/stylus/styles.styl -o dist/ --watch",
+    "serve": "live-server dist/ --port=3000",
+    "dev": "concurrently \"npm run watch:html\" \"npm run watch:css\" \"npm run serve\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guitarzandy009/tictactoe-css-svg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guitarzandy009/tictactoe-css-svg/issues"
+  },
+  "homepage": "https://github.com/guitarzandy009/tictactoe-css-svg#readme",
+  "dependencies": {
+    "pug": "^3.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "live-server": "^1.2.2",
+    "nodemon": "^3.1.10",
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.64.0"
+  }
+}
