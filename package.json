@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:html": "pug src/pug/ -o dist/ --pretty",
-    "build:css": "stylus src/stylus/styles.styl -o dist/",
+    "build:html": "pug dev.pug --pretty",
+    "build:css": "stylus styles.styl",
     "build": "npm run build:html && npm run build:css",
-    "watch:html": "pug src/pug/ -o dist/ --pretty --watch",
-    "watch:css": "stylus src/stylus/styles.styl -o dist/ --watch",
+    "watch:html": "pug dev.pug --pretty --watch",
+    "watch:css": "stylus styles.styl --watch",
     "serve": "live-server dist/ --port=3000",
     "dev": "concurrently \"npm run watch:html\" \"npm run watch:css\" \"npm run serve\""
   },
